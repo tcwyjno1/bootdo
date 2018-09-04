@@ -1,2 +1,2 @@
 # bootdo
-copy bootdo to build a project for seahigh
+Build a project for seahigh
