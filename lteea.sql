@@ -672,7 +672,8 @@ CREATE TABLE IF NOT EXISTS `lte_common_object` (
   `object_code` varchar(200) DEFAULT NULL COMMENT '对象编码',
   `object_name` varchar(200) DEFAULT NULL COMMENT '对象名称',
   `object_define_id` int(11) DEFAULT NULL COMMENT '对象定义ID',
-  `object_area` varchar(200) DEFAULT NULL COMMENT '对象名称',
+  `object_area` varchar(200) DEFAULT NULL COMMENT '区局',
+  `object_sub_area` varchar(200) DEFAULT NULL COMMENT '片区',
   `object_district` varchar(200) DEFAULT NULL COMMENT '对象名称',
   `f1` varchar(200) DEFAULT NULL COMMENT '通用字段',
   `f2` varchar(200) DEFAULT NULL COMMENT '通用字段',
@@ -775,14 +776,16 @@ CREATE TABLE IF NOT EXISTS `lte_common_object` (
   `f99` varchar(200) DEFAULT NULL COMMENT '通用字段',
   `f100` varchar(200) DEFAULT NULL COMMENT '通用字段',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='通用对象';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='通用对象';
 
 -- 正在导出表  bootdo.lte_common_object 的数据：~2 rows (大约)
 DELETE FROM `lte_common_object`;
 /*!40000 ALTER TABLE `lte_common_object` DISABLE KEYS */;
-INSERT INTO `lte_common_object` (`id`, `object_type`, `object_code`, `object_name`, `object_define_id`, `object_area`, `object_district`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `f10`, `f11`, `f12`, `f13`, `f14`, `f15`, `f16`, `f17`, `f18`, `f19`, `f20`, `f21`, `f22`, `f23`, `f24`, `f25`, `f26`, `f27`, `f28`, `f29`, `f30`, `f31`, `f32`, `f33`, `f34`, `f35`, `f36`, `f37`, `f38`, `f39`, `f40`, `f41`, `f42`, `f43`, `f44`, `f45`, `f46`, `f47`, `f48`, `f49`, `f50`, `f51`, `f52`, `f53`, `f54`, `f55`, `f56`, `f57`, `f58`, `f59`, `f60`, `f61`, `f62`, `f63`, `f64`, `f65`, `f66`, `f67`, `f68`, `f69`, `f70`, `f71`, `f72`, `f73`, `f74`, `f75`, `f76`, `f77`, `f78`, `f79`, `f80`, `f81`, `f82`, `f83`, `f84`, `f85`, `f86`, `f87`, `f88`, `f89`, `f90`, `f91`, `f92`, `f93`, `f94`, `f95`, `f96`, `f97`, `f98`, `f99`, `f100`) VALUES
-	(1, 'bbu_object', 'BBU0001', 'BBU设备1', 1, '南区局', '徐汇区', '属性1', '属性2', '属性3', '属性4', '属性5', '属性6', '属性7', '属性8', '属性9', '属性10', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-	(2, 'bbu_object', 'BBU0002', 'BBU设备2', 1, '西区局', '松江区', '属性1', '属性2', '属性3', '属性4', '属性5555', '属性6', '属性7', '属性8', '属性9', '属性10', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO `lte_common_object` (`id`, `object_type`, `object_code`, `object_name`, `object_define_id`, `object_area`, `object_sub_area`, `object_district`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `f10`, `f11`, `f12`, `f13`, `f14`, `f15`, `f16`, `f17`, `f18`, `f19`, `f20`, `f21`, `f22`, `f23`, `f24`, `f25`, `f26`, `f27`, `f28`, `f29`, `f30`, `f31`, `f32`, `f33`, `f34`, `f35`, `f36`, `f37`, `f38`, `f39`, `f40`, `f41`, `f42`, `f43`, `f44`, `f45`, `f46`, `f47`, `f48`, `f49`, `f50`, `f51`, `f52`, `f53`, `f54`, `f55`, `f56`, `f57`, `f58`, `f59`, `f60`, `f61`, `f62`, `f63`, `f64`, `f65`, `f66`, `f67`, `f68`, `f69`, `f70`, `f71`, `f72`, `f73`, `f74`, `f75`, `f76`, `f77`, `f78`, `f79`, `f80`, `f81`, `f82`, `f83`, `f84`, `f85`, `f86`, `f87`, `f88`, `f89`, `f90`, `f91`, `f92`, `f93`, `f94`, `f95`, `f96`, `f97`, `f98`, `f99`, `f100`) VALUES
+	(1, 'bbu_object', 'BBU0001', 'BBU设备1', 1, '南区局', '1片区', '徐汇区', '属性1', '属性2', '属性3', '属性4', '属性5', '属性6', '属性7', '属性8', '属性9', '属性10', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	(2, 'bbu_object', 'BBU0002', 'BBU设备2', 1, '西区局', '1片区', '松江区', '属性1', '属性2', '属性3', '属性4', '属性5555', '属性6', '属性7', '属性8', '属性9', '属性10', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+	(3, 'bbu_object', 'BBU0003', 'BBU设备3', 1, '南区局', '3片区', '徐汇区', '属性1', '属性2', '属性3', '属性4', '属性5', '属性6', '属性7', '属性8', '属性9', '属性10', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	(4, 'bbu_object', 'BBU0004', 'BBU设备4', 1, '西区局', '2片区', '松江区', '属性1', '属性2', '属性3', '属性4', '属性5555', '属性6', '属性7', '属性8', '属性9', '属性10', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 /*!40000 ALTER TABLE `lte_common_object` ENABLE KEYS */;
 
 -- 导出  表 bootdo.oa_notify 结构
@@ -892,7 +895,7 @@ CREATE TABLE IF NOT EXISTS `sys_dept` (
   `order_num` int(11) DEFAULT NULL COMMENT '排序',
   `del_flag` tinyint(4) DEFAULT '0' COMMENT '是否删除  -1：已删除  0：正常',
   PRIMARY KEY (`dept_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COMMENT='部门管理';
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COMMENT='部门管理';
 
 -- 正在导出表  bootdo.sys_dept 的数据：~13 rows (大约)
 DELETE FROM `sys_dept`;
@@ -910,7 +913,9 @@ INSERT INTO `sys_dept` (`dept_id`, `parent_id`, `name`, `order_num`, `del_flag`)
 	(15, 13, '测试二部', 2, 1),
 	(16, 0, '西区局', 6, 1),
 	(17, 0, '东区局', 7, 1),
-	(18, 0, '南区局', 8, 1);
+	(18, 0, '南区局', 8, 1),
+	(19, 18, '1片区', 0, 1),
+	(20, 16, '1片区', 0, 1);
 /*!40000 ALTER TABLE `sys_dept` ENABLE KEYS */;
 
 -- 导出  表 bootdo.sys_dict 结构
@@ -1182,9 +1187,9 @@ CREATE TABLE IF NOT EXISTS `sys_log` (
   `ip` varchar(64) DEFAULT NULL COMMENT 'IP地址',
   `gmt_create` datetime DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=791 DEFAULT CHARSET=utf8 COMMENT='系统日志';
+) ENGINE=InnoDB AUTO_INCREMENT=817 DEFAULT CHARSET=utf8 COMMENT='系统日志';
 
--- 正在导出表  bootdo.sys_log 的数据：~142 rows (大约)
+-- 正在导出表  bootdo.sys_log 的数据：~184 rows (大约)
 DELETE FROM `sys_log`;
 /*!40000 ALTER TABLE `sys_log` DISABLE KEYS */;
 INSERT INTO `sys_log` (`id`, `user_id`, `username`, `operation`, `time`, `method`, `params`, `ip`, `gmt_create`) VALUES
@@ -1369,7 +1374,33 @@ INSERT INTO `sys_log` (`id`, `user_id`, `username`, `operation`, `time`, `method
 	(787, 138, 'admin_dongqu', '登录', 2, 'com.bootdo.system.controller.LoginController.ajaxLogin()', NULL, '127.0.0.1', '2018-09-25 23:17:18'),
 	(788, 138, 'admin_dongqu', '请求访问主页', 8, 'com.bootdo.system.controller.LoginController.index()', NULL, '127.0.0.1', '2018-09-25 23:17:18'),
 	(789, 137, 'admin_nanqu', '登录', 2, 'com.bootdo.system.controller.LoginController.ajaxLogin()', NULL, '127.0.0.1', '2018-09-25 23:17:39'),
-	(790, 137, 'admin_nanqu', '请求访问主页', 11, 'com.bootdo.system.controller.LoginController.index()', NULL, '127.0.0.1', '2018-09-25 23:17:39');
+	(790, 137, 'admin_nanqu', '请求访问主页', 11, 'com.bootdo.system.controller.LoginController.index()', NULL, '127.0.0.1', '2018-09-25 23:17:39'),
+	(791, 1, 'admin', '登录', 5, 'com.bootdo.system.controller.LoginController.ajaxLogin()', NULL, '127.0.0.1', '2018-09-25 23:23:05'),
+	(792, 1, 'admin', '请求访问主页', 10, 'com.bootdo.system.controller.LoginController.index()', NULL, '127.0.0.1', '2018-09-25 23:23:05'),
+	(793, 1, 'admin', '编辑用户', 9, 'com.bootdo.system.controller.UserController.edit()', NULL, '127.0.0.1', '2018-09-25 23:26:29'),
+	(794, 1, 'admin', '添加用户', 4, 'com.bootdo.system.controller.UserController.add()', NULL, '127.0.0.1', '2018-09-25 23:26:36'),
+	(795, 1, 'admin', '保存用户', 150, 'com.bootdo.system.controller.UserController.save()', NULL, '127.0.0.1', '2018-09-25 23:28:27'),
+	(796, 1, 'admin', '添加用户', 4, 'com.bootdo.system.controller.UserController.add()', NULL, '127.0.0.1', '2018-09-25 23:28:51'),
+	(797, 1, 'admin', '保存用户', 124, 'com.bootdo.system.controller.UserController.save()', NULL, '127.0.0.1', '2018-09-25 23:29:14'),
+	(798, 141, 'admin_xiqu_pianqu1', '登录', 3, 'com.bootdo.system.controller.LoginController.ajaxLogin()', NULL, '127.0.0.1', '2018-09-25 23:29:22'),
+	(799, 141, 'admin_xiqu_pianqu1', '请求访问主页', 11, 'com.bootdo.system.controller.LoginController.index()', NULL, '127.0.0.1', '2018-09-25 23:29:22'),
+	(800, 141, 'admin_xiqu_pianqu1', '登录', 25, 'com.bootdo.system.controller.LoginController.ajaxLogin()', NULL, '127.0.0.1', '2018-09-25 23:33:07'),
+	(801, 141, 'admin_xiqu_pianqu1', '请求访问主页', 34, 'com.bootdo.system.controller.LoginController.index()', NULL, '127.0.0.1', '2018-09-25 23:33:07'),
+	(802, 1, 'admin', '登录', 6, 'com.bootdo.system.controller.LoginController.ajaxLogin()', NULL, '127.0.0.1', '2018-09-25 23:48:16'),
+	(803, 1, 'admin', '请求访问主页', 29, 'com.bootdo.system.controller.LoginController.index()', NULL, '127.0.0.1', '2018-09-25 23:48:16'),
+	(804, 1, 'admin', '编辑用户', 27, 'com.bootdo.system.controller.UserController.edit()', NULL, '127.0.0.1', '2018-09-25 23:48:28'),
+	(805, 1, 'admin', '编辑角色', 5, 'com.bootdo.system.controller.RoleController.edit()', NULL, '127.0.0.1', '2018-09-25 23:48:49'),
+	(806, 140, 'admin_nanqu_pianqu1', '登录', 27, 'com.bootdo.system.controller.LoginController.ajaxLogin()', NULL, '127.0.0.1', '2018-09-26 00:15:33'),
+	(807, 140, 'admin_nanqu_pianqu1', '请求访问主页', 33, 'com.bootdo.system.controller.LoginController.index()', NULL, '127.0.0.1', '2018-09-26 00:15:33'),
+	(808, 140, 'admin_nanqu_pianqu1', '请求访问主页', 12, 'com.bootdo.system.controller.LoginController.index()', NULL, '127.0.0.1', '2018-09-26 00:16:15'),
+	(809, 140, 'admin_nanqu_pianqu1', '登录', 31, 'com.bootdo.system.controller.LoginController.ajaxLogin()', NULL, '127.0.0.1', '2018-09-26 00:18:16'),
+	(810, 140, 'admin_nanqu_pianqu1', '请求访问主页', 38, 'com.bootdo.system.controller.LoginController.index()', NULL, '127.0.0.1', '2018-09-26 00:18:16'),
+	(811, 137, 'admin_nanqu', '登录', 5, 'com.bootdo.system.controller.LoginController.ajaxLogin()', NULL, '127.0.0.1', '2018-09-26 00:18:33'),
+	(812, 137, 'admin_nanqu', '请求访问主页', 15, 'com.bootdo.system.controller.LoginController.index()', NULL, '127.0.0.1', '2018-09-26 00:18:33'),
+	(813, 137, 'admin_nanqu', '登录', 31, 'com.bootdo.system.controller.LoginController.ajaxLogin()', NULL, '127.0.0.1', '2018-09-26 00:19:11'),
+	(814, 137, 'admin_nanqu', '请求访问主页', 40, 'com.bootdo.system.controller.LoginController.index()', NULL, '127.0.0.1', '2018-09-26 00:19:11'),
+	(815, 140, 'admin_nanqu_pianqu1', '登录', 5, 'com.bootdo.system.controller.LoginController.ajaxLogin()', NULL, '127.0.0.1', '2018-09-26 00:19:18'),
+	(816, 140, 'admin_nanqu_pianqu1', '请求访问主页', 17, 'com.bootdo.system.controller.LoginController.index()', NULL, '127.0.0.1', '2018-09-26 00:19:18');
 /*!40000 ALTER TABLE `sys_log` ENABLE KEYS */;
 
 -- 导出  表 bootdo.sys_menu 结构
@@ -1470,7 +1501,7 @@ CREATE TABLE IF NOT EXISTS `sys_role_menu` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3416 DEFAULT CHARSET=utf8 COMMENT='角色与菜单对应关系';
 
--- 正在导出表  bootdo.sys_role_menu 的数据：~248 rows (大约)
+-- 正在导出表  bootdo.sys_role_menu 的数据：~246 rows (大约)
 DELETE FROM `sys_role_menu`;
 /*!40000 ALTER TABLE `sys_role_menu` DISABLE KEYS */;
 INSERT INTO `sys_role_menu` (`id`, `role_id`, `menu_id`) VALUES
@@ -1770,7 +1801,7 @@ CREATE TABLE IF NOT EXISTS `sys_user` (
   `city` varchar(255) DEFAULT NULL COMMENT '所在城市',
   `district` varchar(255) DEFAULT NULL COMMENT '所在地区',
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=140 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=142 DEFAULT CHARSET=utf8;
 
 -- 正在导出表  bootdo.sys_user 的数据：~5 rows (大约)
 DELETE FROM `sys_user`;
@@ -1780,7 +1811,9 @@ INSERT INTO `sys_user` (`user_id`, `username`, `name`, `password`, `dept_id`, `e
 	(2, 'test', '临时用户', '6cf3bb3deba2aadbd41ec9a22511084e', 6, 'test@bootdo.com', NULL, 1, 1, '2017-08-14 13:43:05', '2017-08-14 21:15:36', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 	(137, 'admin_nanqu', '南区局', '1ab2163447398ef748b2d50e30f0725a', 18, 'wangyujuej8@sina.com', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 	(138, 'admin_dongqu', '东区局', '6b01adc0e705b149c5e4a14fdfb56d6f', 17, 'wangyujuej8@sina.com', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-	(139, 'admin_xiqu', '西区局', 'b5c20b01100b5c169ac2beda579bc17d', 16, 'wangyujuej8@sina.com', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+	(139, 'admin_xiqu', '西区局', 'b5c20b01100b5c169ac2beda579bc17d', 16, 'wangyujuej8@sina.com', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	(140, 'admin_nanqu_pianqu1', '南区局1片区', '85db5afdb7534d6d6b57bbef1db3cf6d', 19, 'wangyujuej8@sina.com', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	(141, 'admin_xiqu_pianqu1', '西区局1片区', 'e6675d51b47aee0f4331146aac4c0ac2', 20, 'wangyujuej8@sina.com', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 /*!40000 ALTER TABLE `sys_user` ENABLE KEYS */;
 
 -- 导出  表 bootdo.sys_user_plus 结构
@@ -1802,7 +1835,7 @@ CREATE TABLE IF NOT EXISTS `sys_user_role` (
   `user_id` bigint(20) DEFAULT NULL COMMENT '用户ID',
   `role_id` bigint(20) DEFAULT NULL COMMENT '角色ID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=139 DEFAULT CHARSET=utf8 COMMENT='用户与角色对应关系';
+) ENGINE=InnoDB AUTO_INCREMENT=141 DEFAULT CHARSET=utf8 COMMENT='用户与角色对应关系';
 
 -- 正在导出表  bootdo.sys_user_role 的数据：~23 rows (大约)
 DELETE FROM `sys_user_role`;
@@ -1830,7 +1863,9 @@ INSERT INTO `sys_user_role` (`id`, `user_id`, `role_id`) VALUES
 	(135, 2, 59),
 	(136, 137, 60),
 	(137, 138, 60),
-	(138, 139, 60);
+	(138, 139, 60),
+	(139, 140, 60),
+	(140, 141, 60);
 /*!40000 ALTER TABLE `sys_user_role` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

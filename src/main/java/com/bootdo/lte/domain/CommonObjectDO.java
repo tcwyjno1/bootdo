@@ -28,6 +28,8 @@ public class CommonObjectDO implements Serializable {
 	//对象名称
 	private String objectArea;
 	//对象名称
+	private String objectSubArea;
+	//对象名称
 	private String objectDistrict;
 	//通用字段
 	private String f1;
@@ -302,6 +304,15 @@ public class CommonObjectDO implements Serializable {
 	public String getObjectArea() {
 		return objectArea;
 	}
+
+	public String getObjectSubArea() {
+		return objectSubArea;
+	}
+
+	public void setObjectSubArea(String objectSubArea) {
+		this.objectSubArea = objectSubArea;
+	}
+
 	/**
 	 * 设置：对象名称
 	 */

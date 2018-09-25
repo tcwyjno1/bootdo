@@ -7,8 +7,10 @@ import java.util.Objects;
 import java.util.Set;
 
 import com.bootdo.common.utils.ShiroUtils;
+import com.bootdo.system.domain.DeptDO;
 import com.bootdo.system.domain.RoleDO;
 import com.bootdo.system.domain.UserDO;
+import com.bootdo.system.service.DeptService;
 import com.bootdo.system.service.MenuService;
 import com.bootdo.system.service.RoleService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -45,7 +47,8 @@ public class CommonObjectController {
 
     @Autowired
     private RoleService roleService;
-
+	@Autowired
+	private DeptService deptService;
     @Autowired
     private MenuService menuService;
 	@GetMapping()
@@ -71,7 +74,14 @@ public class CommonObjectController {
 			}
 		}
 		if(checkDetp){
-			query.put("deptId",user.getDeptId());
+        	DeptDO deptDO = deptService.get(user.getDeptId());
+        	if(deptDO.getParentId() != null && deptDO.getParentId() == 0){
+                query.put("deptParentId",user.getDeptId());
+            }else{
+                query.put("deptParentId",deptDO.getParentId());
+                query.put("deptId",user.getDeptId());
+            }
+
 		}
 		List<CommonObjectDO> commonObjectList = commonObjectService.list(query);
          

@@ -71,6 +71,10 @@ function load() {
 									field : 'objectArea', 
 									title : '区局'
 								},
+								{
+									field : 'objectSubArea',
+									title : '片区'
+								},
 																{
 									field : 'objectDistrict', 
 									title : '行政区'
