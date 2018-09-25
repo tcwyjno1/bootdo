@@ -16,13 +16,13 @@
 					  )
 
 				  </if>
-		  		  <if test="id != null and id != ''"> and id = #{id} </if>
-		  		  <if test="objectType != null and objectType != ''"> and object_type = #{objectType} </if>
-		  		  <if test="objectCode != null and objectCode != ''"> and object_code = #{objectCode} </if>
-		  		  <if test="objectName != null and objectName != ''"> and object_name = #{objectName} </if>
-		  		  <if test="objectDefineId != null and objectDefineId != ''"> and object_define_id = #{objectDefineId} </if>
-		  		  <if test="objectArea != null and objectArea != ''"> and object_area = #{objectArea} </if>
-		  		  <if test="objectDistrict != null and objectDistrict != ''"> and object_district = #{objectDistrict} </if>
+			<if test="id != null and id != ''"> and id = #{id} </if>
+			<if test="objectType != null and objectType != ''"> and object_type = #{objectType} </if>
+			<if test="objectCode != null and objectCode != ''"> and object_code LIKE  CONCAT('%',#{objectCode},'%')  </if>
+			<if test="objectName != null and objectName != ''"> and object_name LIKE  CONCAT('%',#{objectName},'%') </if>
+			<if test="objectDefineId != null and objectDefineId != ''"> and object_define_id = #{objectDefineId} </if>
+			<if test="objectArea != null and objectArea != ''"> and object_area LIKE  CONCAT('%',#{objectArea},'%') </if>
+			<if test="objectDistrict != null and objectDistrict != ''"> and object_district LIKE  CONCAT('%',#{objectDistrict},'%')  </if>
 		  		  <if test="f1 != null and f1 != ''"> and f1 = #{f1} </if>
 		  		  <if test="f2 != null and f2 != ''"> and f2 = #{f2} </if>
 		  		  <if test="f3 != null and f3 != ''"> and f3 = #{f3} </if>
@@ -139,14 +139,14 @@
 	
  	<select id="count" resultType="int">
 		select count(*) from lte_common_object
-		 <where>  
-		  		  <if test="id != null and id != ''"> and id = #{id} </if>
-		  		  <if test="objectType != null and objectType != ''"> and object_type = #{objectType} </if>
-		  		  <if test="objectCode != null and objectCode != ''"> and object_code = #{objectCode} </if>
-		  		  <if test="objectName != null and objectName != ''"> and object_name = #{objectName} </if>
-		  		  <if test="objectDefineId != null and objectDefineId != ''"> and object_define_id = #{objectDefineId} </if>
-		  		  <if test="objectArea != null and objectArea != ''"> and object_area = #{objectArea} </if>
-		  		  <if test="objectDistrict != null and objectDistrict != ''"> and object_district = #{objectDistrict} </if>
+		 <where>
+			 <if test="id != null and id != ''"> and id = #{id} </if>
+			 <if test="objectType != null and objectType != ''"> and object_type = #{objectType} </if>
+			 <if test="objectCode != null and objectCode != ''"> and object_code LIKE  CONCAT('%',#{objectCode},'%')  </if>
+			 <if test="objectName != null and objectName != ''"> and object_name LIKE  CONCAT('%',#{objectName},'%') </if>
+			 <if test="objectDefineId != null and objectDefineId != ''"> and object_define_id = #{objectDefineId} </if>
+			 <if test="objectArea != null and objectArea != ''"> and object_area LIKE  CONCAT('%',#{objectArea},'%') </if>
+			 <if test="objectDistrict != null and objectDistrict != ''"> and object_district LIKE  CONCAT('%',#{objectDistrict},'%')  </if>
 		  		  <if test="f1 != null and f1 != ''"> and f1 = #{f1} </if>
 		  		  <if test="f2 != null and f2 != ''"> and f2 = #{f2} </if>
 		  		  <if test="f3 != null and f3 != ''"> and f3 = #{f3} </if>

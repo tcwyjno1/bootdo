@@ -38,4 +38,5 @@ public class ShiroUtils {
         Collection<Session> sessions = sessionDAO.getActiveSessions();
         return principals;
     }
+
 }

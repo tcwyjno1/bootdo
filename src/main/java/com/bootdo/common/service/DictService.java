@@ -8,9 +8,9 @@ import java.util.Map;
 
 /**
  * 字典表
- * 
- * @author chglee
- * @email 1992lcg@163.com
+ *
+ * @author Roger Wang
+ * @email 476410060@qq.com
  * @date 2017-09-29 18:28:07
  */
 public interface DictService {

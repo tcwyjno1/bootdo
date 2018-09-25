@@ -5,8 +5,8 @@ import java.util.List;
 /**
  * 表数据
  *
- * @author chenshun
- * @email sunlightcs@gmail.com
+ * @author Roger Wang
+ * @email 476410060@qq.com
  * @date 2016年12月20日 上午12:02:55
  */
 public class TableDO {

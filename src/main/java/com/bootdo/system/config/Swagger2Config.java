@@ -14,7 +14,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * ${DESCRIPTION}
  *
- * @author edison
+ * @author Roger Wang
+ * @email 476410060@qq.com
  * @create 2017-01-02 23:53
  */
 @EnableSwagger2
