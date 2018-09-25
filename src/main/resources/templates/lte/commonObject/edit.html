@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content ">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						<form class="form-horizontal m-t" id="signupForm">
+						<input id="id" name="id" th:value="${commonObject.id}"  type="hidden">
+							<div class="form-group">	
+								<label class="col-sm-3 control-label">对象类型：</label>
+								<div class="col-sm-8">
+									<input id="objectType" name="objectType" th:value="${commonObject.objectType}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">对象编码：</label>
+								<div class="col-sm-8">
+									<input id="objectCode" name="objectCode" th:value="${commonObject.objectCode}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">对象名称：</label>
+								<div class="col-sm-8">
+									<input id="objectName" name="objectName" th:value="${commonObject.objectName}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">对象定义ID：</label>
+								<div class="col-sm-8">
+									<input id="objectDefineId" name="objectDefineId" th:value="${commonObject.objectDefineId}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">对象名称：</label>
+								<div class="col-sm-8">
+									<input id="objectArea" name="objectArea" th:value="${commonObject.objectArea}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">对象名称：</label>
+								<div class="col-sm-8">
+									<input id="objectDistrict" name="objectDistrict" th:value="${commonObject.objectDistrict}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f1" name="f1" th:value="${commonObject.f1}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f2" name="f2" th:value="${commonObject.f2}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f3" name="f3" th:value="${commonObject.f3}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f4" name="f4" th:value="${commonObject.f4}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f5" name="f5" th:value="${commonObject.f5}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f6" name="f6" th:value="${commonObject.f6}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f7" name="f7" th:value="${commonObject.f7}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f8" name="f8" th:value="${commonObject.f8}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f9" name="f9" th:value="${commonObject.f9}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f10" name="f10" th:value="${commonObject.f10}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f11" name="f11" th:value="${commonObject.f11}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f12" name="f12" th:value="${commonObject.f12}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f13" name="f13" th:value="${commonObject.f13}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f14" name="f14" th:value="${commonObject.f14}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f15" name="f15" th:value="${commonObject.f15}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f16" name="f16" th:value="${commonObject.f16}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f17" name="f17" th:value="${commonObject.f17}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f18" name="f18" th:value="${commonObject.f18}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f19" name="f19" th:value="${commonObject.f19}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f20" name="f20" th:value="${commonObject.f20}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f21" name="f21" th:value="${commonObject.f21}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f22" name="f22" th:value="${commonObject.f22}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f23" name="f23" th:value="${commonObject.f23}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f24" name="f24" th:value="${commonObject.f24}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f25" name="f25" th:value="${commonObject.f25}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f26" name="f26" th:value="${commonObject.f26}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f27" name="f27" th:value="${commonObject.f27}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f28" name="f28" th:value="${commonObject.f28}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f29" name="f29" th:value="${commonObject.f29}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f30" name="f30" th:value="${commonObject.f30}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f31" name="f31" th:value="${commonObject.f31}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f32" name="f32" th:value="${commonObject.f32}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f33" name="f33" th:value="${commonObject.f33}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f34" name="f34" th:value="${commonObject.f34}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f35" name="f35" th:value="${commonObject.f35}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f36" name="f36" th:value="${commonObject.f36}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f37" name="f37" th:value="${commonObject.f37}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f38" name="f38" th:value="${commonObject.f38}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f39" name="f39" th:value="${commonObject.f39}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f40" name="f40" th:value="${commonObject.f40}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f41" name="f41" th:value="${commonObject.f41}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f42" name="f42" th:value="${commonObject.f42}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f43" name="f43" th:value="${commonObject.f43}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f44" name="f44" th:value="${commonObject.f44}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f45" name="f45" th:value="${commonObject.f45}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f46" name="f46" th:value="${commonObject.f46}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f47" name="f47" th:value="${commonObject.f47}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f48" name="f48" th:value="${commonObject.f48}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f49" name="f49" th:value="${commonObject.f49}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f50" name="f50" th:value="${commonObject.f50}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f51" name="f51" th:value="${commonObject.f51}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f52" name="f52" th:value="${commonObject.f52}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f53" name="f53" th:value="${commonObject.f53}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f54" name="f54" th:value="${commonObject.f54}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f55" name="f55" th:value="${commonObject.f55}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f56" name="f56" th:value="${commonObject.f56}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f57" name="f57" th:value="${commonObject.f57}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f58" name="f58" th:value="${commonObject.f58}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f59" name="f59" th:value="${commonObject.f59}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f60" name="f60" th:value="${commonObject.f60}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f61" name="f61" th:value="${commonObject.f61}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f62" name="f62" th:value="${commonObject.f62}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f63" name="f63" th:value="${commonObject.f63}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f64" name="f64" th:value="${commonObject.f64}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f65" name="f65" th:value="${commonObject.f65}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f66" name="f66" th:value="${commonObject.f66}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f67" name="f67" th:value="${commonObject.f67}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f68" name="f68" th:value="${commonObject.f68}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f69" name="f69" th:value="${commonObject.f69}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f70" name="f70" th:value="${commonObject.f70}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f71" name="f71" th:value="${commonObject.f71}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f72" name="f72" th:value="${commonObject.f72}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f73" name="f73" th:value="${commonObject.f73}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f74" name="f74" th:value="${commonObject.f74}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f75" name="f75" th:value="${commonObject.f75}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f76" name="f76" th:value="${commonObject.f76}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f77" name="f77" th:value="${commonObject.f77}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f78" name="f78" th:value="${commonObject.f78}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f79" name="f79" th:value="${commonObject.f79}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f80" name="f80" th:value="${commonObject.f80}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f81" name="f81" th:value="${commonObject.f81}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f82" name="f82" th:value="${commonObject.f82}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f83" name="f83" th:value="${commonObject.f83}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f84" name="f84" th:value="${commonObject.f84}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f85" name="f85" th:value="${commonObject.f85}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f86" name="f86" th:value="${commonObject.f86}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f87" name="f87" th:value="${commonObject.f87}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f88" name="f88" th:value="${commonObject.f88}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f89" name="f89" th:value="${commonObject.f89}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f90" name="f90" th:value="${commonObject.f90}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f91" name="f91" th:value="${commonObject.f91}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f92" name="f92" th:value="${commonObject.f92}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f93" name="f93" th:value="${commonObject.f93}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f94" name="f94" th:value="${commonObject.f94}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f95" name="f95" th:value="${commonObject.f95}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f96" name="f96" th:value="${commonObject.f96}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f97" name="f97" th:value="${commonObject.f97}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f98" name="f98" th:value="${commonObject.f98}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f99" name="f99" th:value="${commonObject.f99}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">通用字段：</label>
+								<div class="col-sm-8">
+									<input id="f100" name="f100" th:value="${commonObject.f100}" class="form-control" type="text">
+								</div>
+							</div>
+																					<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-3">
+									<button type="submit" class="btn btn-primary">提交</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+	</div>
+	</div>
+	<div th:include="include::footer"></div>
+	<script type="text/javascript" src="/js/appjs/lte/commonObject/edit.js">
+	</script>
+</body>
+</html>
