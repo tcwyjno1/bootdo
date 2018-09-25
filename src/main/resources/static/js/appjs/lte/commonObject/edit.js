@@ -47,3 +47,7 @@ function validateRule() {
 		}
 	})
 }
+
+var bbuBase = {
+
+}
