@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header">
+
+</head>
+<style type="text/css">
+    .cursor_hand{
+        cursor: pointer;
+    }
+</style>
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+    <div class="row ">
+        <div class="col-sm-12">
+            <div class="col-md-8">
+                <div class="panel panel-success">
+                    <div class="panel-heading">设备总览(西区局)</div>
+                    <div class="panel-body pre-scrollable">
+                        <div class="bs-glyphicons">
+                            <ul class="bs-glyphicons-list">
+
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0001</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0002</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0003</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0004</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0005</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0006</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0007</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0001</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0002</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0003</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0004</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0005</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0006</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0007</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li>
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img title="设备掉线" alt="设备掉线" src="/img/lte/bbu_alarm_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+                                <li class="cursor_hand" onclick="openDetail()">
+                                    <img src="/img/lte/bbu_normal_48.png" />
+                                    <span class="glyphicon-class">&nbsp;</span>
+                                    <span class="glyphicon-class">BBU0008</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        设备总数:150-告警设备数:<span class="text-danger">65</span>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">告警数量时序图</div>
+                    <div class="panel-body">
+                        <div class="ibox-content">
+                        <div class="echarts" id="echarts-line-chart"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">今日告警</div>
+                    <div class="panel-body">
+                        <div class="ibox-content">
+                        <div class="echarts" id="echarts-pie-chart"></div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-warning">
+                    <div class="panel-heading">历史告警</div>
+                    <div class="panel-body">
+                        <div class="ibox-content">
+                            <div class="echarts" id="echarts-pie2-chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:include="include::footer"></div>
+<!-- ECharts -->
+<script src="/js/plugins/echarts/echarts-all.js"></script>
+<script type="text/javascript" src="/js/appjs/lte/lteAlarm/index.js"></script>
+
+
+
+
+
+</body>
+</html>
