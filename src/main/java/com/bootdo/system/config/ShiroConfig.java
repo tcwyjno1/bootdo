@@ -5,6 +5,7 @@ import com.bootdo.common.config.Constant;
 import com.bootdo.common.redis.shiro.RedisCacheManager;
 import com.bootdo.common.redis.shiro.RedisManager;
 import com.bootdo.common.redis.shiro.RedisSessionDAO;
+import com.bootdo.system.filter.ValidateAuthenticationFilter;
 import com.bootdo.system.shiro.UserRealm;
 //import org.apache.shiro.cache.CacheManager;
 import net.sf.ehcache.CacheManager;
@@ -20,15 +21,18 @@ import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.cache.ehcache.EhCacheCacheManager;
 import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 
+import javax.servlet.Filter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * @author bootdo 1992lcg@163.com
@@ -65,14 +69,22 @@ public class ShiroConfig {
         return new ShiroDialect();
     }
 
+
+
     @Bean
     ShiroFilterFactoryBean shiroFilterFactoryBean(SecurityManager securityManager) {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
+
+        Map<String,Filter> filters = shiroFilterFactoryBean.getFilters();
+        //filters.put("authc",new ValidateAuthenticationFilter());
         shiroFilterFactoryBean.setSecurityManager(securityManager);
+
+
         shiroFilterFactoryBean.setLoginUrl("/login");
         shiroFilterFactoryBean.setSuccessUrl("/index");
         shiroFilterFactoryBean.setUnauthorizedUrl("/403");
         LinkedHashMap<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
+        filterChainDefinitionMap.put("/getValidateCode","anon");//add by yjw for validate code;
         filterChainDefinitionMap.put("/login","anon");
         filterChainDefinitionMap.put("/css/**", "anon");
         filterChainDefinitionMap.put("/js/**", "anon");
@@ -83,6 +95,8 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/upload/**", "anon");
         filterChainDefinitionMap.put("/files/**", "anon");
         filterChainDefinitionMap.put("/logout", "logout");
+
+
         filterChainDefinitionMap.put("/", "anon");
         filterChainDefinitionMap.put("/blog", "anon");
         filterChainDefinitionMap.put("/blog/open/**", "anon");

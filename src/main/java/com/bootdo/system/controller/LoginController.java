@@ -1,13 +1,12 @@
 package com.bootdo.system.controller;
 
 import com.bootdo.common.annotation.Log;
+import com.bootdo.common.config.Constant;
 import com.bootdo.common.controller.BaseController;
 import com.bootdo.common.domain.FileDO;
 import com.bootdo.common.domain.Tree;
 import com.bootdo.common.service.FileService;
-import com.bootdo.common.utils.MD5Utils;
-import com.bootdo.common.utils.R;
-import com.bootdo.common.utils.ShiroUtils;
+import com.bootdo.common.utils.*;
 import com.bootdo.system.domain.MenuDO;
 import com.bootdo.system.service.MenuService;
 import io.swagger.models.auth.In;
@@ -24,12 +23,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.imageio.ImageIO;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class LoginController extends BaseController {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
-
+    public static final String KEY_CAPTCHA = "KEY_CAPTCHA";
 	@Autowired
 	MenuService menuService;
 	@Autowired
@@ -39,6 +46,34 @@ public class LoginController extends BaseController {
 
 		return "redirect:/index";
 	}
+
+    @Log("获取验证码")
+    @GetMapping({ "/getValidateCode" })
+	public void getValidateCode(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("/getValidateCode controller");
+        // 设置相应类型,告诉浏览器输出的内容为图片
+        response.setContentType("image/jpeg");
+        // 不缓存此内容
+        response.setHeader("Pragma", "No-cache");
+        response.setHeader("Cache-Control", "no-cache");
+        response.setDateHeader("Expire", 0);
+        try {
+
+            HttpSession session = request.getSession();
+
+            CaptchaUtil tool = new CaptchaUtil();
+            StringBuffer code = new StringBuffer();
+            BufferedImage image = tool.genRandomCodeImage(code);
+            session.removeAttribute(KEY_CAPTCHA);
+            session.setAttribute(KEY_CAPTCHA, code.toString());
+
+            // 将内存中的图片通过流动形式输出到客户端
+            ImageIO.write(image, "JPEG", response.getOutputStream());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 	@Log("请求访问主页")
 	@GetMapping({ "/index" })
@@ -69,7 +104,12 @@ public class LoginController extends BaseController {
 	@Log("登录")
 	@PostMapping("/login")
 	@ResponseBody
-	R ajaxLogin(String username, String password) {
+	R ajaxLogin(String username, String password,HttpServletRequest request) {
+		Map<String,Object> paraMap = RequestUtil.getParameterValueMap(request,false,false);
+		String exception =  (String)paraMap.get(Constant.SHIRO_LOG_IN_FAILURE);
+		if(!Constant.KAPTCHA_VALIDATE_FAILED.equals(exception==null?"":exception)){
+			return R.error("请填写正确的验证码!");
+		}
 
 		password = MD5Utils.encrypt(username, password);
 		UsernamePasswordToken token = new UsernamePasswordToken(username, password);

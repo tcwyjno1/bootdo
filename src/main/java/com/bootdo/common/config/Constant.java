@@ -20,5 +20,7 @@ public class Constant {
 
     public static String LOG_ERROR = "error";
 
-    
+    public static String SHIRO_LOG_IN_FAILURE = "shiroLoginFailure";
+
+    public static String KAPTCHA_VALIDATE_FAILED = "kaptchaValidateFailed";
 }
