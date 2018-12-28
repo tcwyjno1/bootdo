@@ -15,18 +15,32 @@ import javax.servlet.http.HttpServletRequest;
 public class ValidateAuthenticationFilter extends FormAuthenticationFilter {
     @Override
     protected boolean onAccessDenied(ServletRequest request, ServletResponse response) throws Exception {
-        HttpServletRequest httpServletRequest = (HttpServletRequest)request;
-        Session session = SecurityUtils.getSubject().getSession();
-        String validateCode = (String)session.getAttribute("validateCode");
-        String pageValidateCode = httpServletRequest.getParameter("validateCode");
-        if(pageValidateCode == null){
-            httpServletRequest.setAttribute(Constant.SHIRO_LOG_IN_FAILURE,Constant.KAPTCHA_VALIDATE_FAILED);
-            return true;
-        }else if(pageValidateCode != null && validateCode != null && !pageValidateCode.equals(validateCode)){
-            httpServletRequest.setAttribute(Constant.SHIRO_LOG_IN_FAILURE,Constant.KAPTCHA_VALIDATE_FAILED);
-            return true;
+        if (this.isLoginRequest(request, response)) {
+            if(this.isLoginSubmission(request, response)){
+                HttpServletRequest httpServletRequest = (HttpServletRequest)request;
+                Session session = SecurityUtils.getSubject().getSession();
+                String validateCode = (String)session.getAttribute(Constant.KEY_VALIDATE_CODE);
+                String pageValidateCode = httpServletRequest.getParameter(Constant.KEY_VALIDATE_CODE).toUpperCase();
+                if(pageValidateCode == null){
+                    httpServletRequest.setAttribute(Constant.SHIRO_LOG_IN_FAILURE,Constant.KAPTCHA_VALIDATE_FAILED);
+                    return true;
+                }else if(pageValidateCode != null && validateCode != null && !pageValidateCode.equals(validateCode)){
+                    httpServletRequest.setAttribute(Constant.SHIRO_LOG_IN_FAILURE,Constant.KAPTCHA_VALIDATE_FAILED);
+                    return true;
+                }else{
+                    httpServletRequest.setAttribute(Constant.SHIRO_LOG_IN_FAILURE,Constant.KAPTCHA_VALIDATE_SUCCESS);
+                    return true;
+                }
+            }else{
+                return true;
+            }
+
+        }else{
+            this.saveRequestAndRedirectToLogin(request,response);
+            return false;
         }
-        return super.onAccessDenied(request, response);
+
+        //return super.onAccessDenied(request, response);
     }
 
 //    @Bean

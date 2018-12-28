@@ -18,7 +18,7 @@ public class CaptchaUtil {
     private Random random = new Random();
 
     private int width = 80;// 图片宽
-    private int height = 25;// 图片高
+    private int height = 30;// 图片高
     private int lineNum = 50;// 干扰线数量
     private int strNum = 4;// 随机产生字符数量
 

@@ -23,4 +23,6 @@ public class Constant {
     public static String SHIRO_LOG_IN_FAILURE = "shiroLoginFailure";
 
     public static String KAPTCHA_VALIDATE_FAILED = "kaptchaValidateFailed";
+    public static String KAPTCHA_VALIDATE_SUCCESS = "kaptchaValidateSuccess";
+    public static String KEY_VALIDATE_CODE = "keyValidateCode";
 }

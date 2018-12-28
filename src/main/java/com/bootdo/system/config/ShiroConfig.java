@@ -76,7 +76,7 @@ public class ShiroConfig {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
 
         Map<String,Filter> filters = shiroFilterFactoryBean.getFilters();
-        //filters.put("authc",new ValidateAuthenticationFilter());
+        filters.put("authc",new ValidateAuthenticationFilter());
         shiroFilterFactoryBean.setSecurityManager(securityManager);
 
 
@@ -85,7 +85,7 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setUnauthorizedUrl("/403");
         LinkedHashMap<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
         filterChainDefinitionMap.put("/getValidateCode","anon");//add by yjw for validate code;
-        filterChainDefinitionMap.put("/login","anon");
+        filterChainDefinitionMap.put("/login","authc");
         filterChainDefinitionMap.put("/css/**", "anon");
         filterChainDefinitionMap.put("/js/**", "anon");
         filterChainDefinitionMap.put("/fonts/**", "anon");

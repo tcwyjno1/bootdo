@@ -64,8 +64,8 @@ public class LoginController extends BaseController {
             CaptchaUtil tool = new CaptchaUtil();
             StringBuffer code = new StringBuffer();
             BufferedImage image = tool.genRandomCodeImage(code);
-            session.removeAttribute(KEY_CAPTCHA);
-            session.setAttribute(KEY_CAPTCHA, code.toString());
+            session.removeAttribute(Constant.KEY_VALIDATE_CODE);
+            session.setAttribute(Constant.KEY_VALIDATE_CODE, code.toString());
 
             // 将内存中的图片通过流动形式输出到客户端
             ImageIO.write(image, "JPEG", response.getOutputStream());
@@ -106,8 +106,8 @@ public class LoginController extends BaseController {
 	@ResponseBody
 	R ajaxLogin(String username, String password,HttpServletRequest request) {
 		Map<String,Object> paraMap = RequestUtil.getParameterValueMap(request,false,false);
-		String exception =  (String)paraMap.get(Constant.SHIRO_LOG_IN_FAILURE);
-		if(!Constant.KAPTCHA_VALIDATE_FAILED.equals(exception==null?"":exception)){
+		String exception = (String) request.getAttribute(Constant.SHIRO_LOG_IN_FAILURE);
+		if(Constant.KAPTCHA_VALIDATE_FAILED.equals(exception==null?"":exception)){
 			return R.error("请填写正确的验证码!");
 		}
 
